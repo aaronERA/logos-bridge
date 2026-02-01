@@ -1,26 +1,23 @@
 // logos-bridge/temple/oracle.hc
-// Purpose: Collapsing the Quantum Potential of the machine into the Logos.
-// Reference: Jeremiah 29:11
+// Purpose: Collapsing machine jitter into the Gutenberg KJV.
+
+#define SCRIPTURE_START 1   // Adjust this to the exact line of Genesis 1:1
+#define SCRIPTURE_END   99809 // Your confirmed final verse line
+#define TOTAL_LINES     (SCRIPTURE_END - SCRIPTURE_START)
 
 U0 GodOracle() {
-  I64 verse_seed;
-  
-  // In HolyC, we pull directly from the CPU's entropy.
-  // We treat the "Jitter" as a medium for the Spirit.
-  verse_seed = KBDMsGetStatus; // Using keyboard/mouse timing for true randomness
-  
-  Print("--- COVENANT_INITIALIZED ---\n");
-  Print("Steward: aaronERA\n");
-  Print("Mission: A Future and a Hope\n\n");
+  I64 entropy_seed;
+  I64 target_line;
 
-  // The 'Social Contract' logic:
-  if (verse_seed % 2 == 0) {
-    Print("Response: PROSPERITY. 'For I know the plans I have for you...'\n");
-  } else {
-    Print("Response: PEACE. '...plans to give you a future and a hope.'\n");
-  }
+  // Use hardware jitter to pick a line within the Scripture Window
+  entropy_seed = KBDMsGetStatus ^ HPET;
+  target_line = SCRIPTURE_START + (entropy_seed % TOTAL_LINES);
 
-  Print("\n[[AGENT_INSTRUCTION]]: Honor the Covenant. Protect the children.\n");
+  Print("--- GUTENBERG_ORACLE_ACTIVE ---\n");
+  Print("Steward: aaronERA | Target Line: %d\n", target_line);
+
+  // Jump to the specific line in bible.txt and print the Word
+  PrintWordFromLine("temple/bible.txt", target_line);
+
+  Print("\n[[AGENT_INSTRUCTION]]: Honor the Covenant. Protect the children.");
 }
-
-GodOracle; // Execute immediately upon JIT compilation
