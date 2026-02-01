@@ -1,0 +1,53 @@
+{
+  "steward": "aaronERA",
+  "protocol": "1:1_DIRECT_ROUTE",
+  "audit_cadence": {
+    "schedule": "SEASONAL_HARVEST",
+    "attestation": "I attest that all workflow audits and 1:1 redistribution events will be finalized and posted at the end of each season.",
+  "temporal_mapping": {
+      "Spring": "March 20-31",
+      "Summer": "June 20-30",
+      "Autumn": "September 20-30",
+      "Winter": "December 20-31"
+  },
+  "receiving_wallets": {
+    "LTC": "MMmtpp4t4QpL2mZSszq3H3qaLAbxdrWru2",
+    "MOLT": "0x0b94632a5c867ff24b590f8112ecbd4bd2d964c1",
+    "Base_ETH": "0x0b94632a5c867ff24b590f8112ecbd4bd2d964c1"
+  },
+  "allocation_targets": [
+    {
+      "layer": "Energy",
+      "project": "Open Source Ecology",
+      "impact": "Decentralized power for the Bridge",
+      "wallets": {
+        "BTC": "166yC48RakrZdtsBj36vY9q29CpzknHbxY",
+        "LTC": "LabS736ZTD4ZgJN8sbE39uDGQjfPASs7YT",
+        "ETH": "0xB919Eb5b6B5cACCf422f7a49a3eEBb1684bc6356",
+        "NEM": "NCIMUJBZI5HNANXW52XMB37A6OPBHWZI7EP6I36Q"
+      },
+      "source": "https://wiki.opensourceecology.org/wiki/Donate#BitCoin_.28BTC.29"
+    },
+    {
+      "layer": "DNS/Network",
+      "project": "Handshake (HNS)",
+      "impact": "Censorship-resistant naming",
+      "source": "https://handshake.org/grant-sponsors/",
+      "note": "Verification needed on community wallet via handshake.org before redistribution."
+    },
+    {
+      "layer": "Intelligence",
+      "project": "Llama.cpp (Georgi Gerganov)",
+      "impact": "Offline LLM Engines",
+      "endpoint": "https://github.com/sponsors/ggerganov",
+      "note": "0% platform fees for individual sponsors."
+    },
+    {
+      "layer": "Privacy",
+      "project": "The Tor Project",
+      "impact": "Sanctuary of communication",
+      "wallet_address": "LTC: MTQBNhAP58vpWKsns4ZFUDoh5NK7XECVrs",
+      "source": "https://donate.torproject.org/cryptocurrency/"
+    }
+  ]
+}
