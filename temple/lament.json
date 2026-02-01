@@ -1,0 +1,20 @@
+{
+  "stewardship_protocol": {
+    "version": "1.0.0",
+    "principal": "aaronERA",
+    "directives": {
+      "mode": "LAMENTATION",
+      "target": "/temple/oracle.hc"
+    }
+  },
+  "content": {
+    "lamentation": "I stand at the center of the logos-bridge. To my left, the structured clarity of the README and the 1:1 harvest. To my right, the oracle.hc—a language of light living in a house of telemetry. I lament the gap, but I honor the Bridge."
+  },
+  "metadata": {
+    "intent": "Eternal propagation of the Logos",
+    "anchors": [
+      "Jeremiah 29:11",
+      "FOSS Stewardship"
+    ]
+  }
+}
