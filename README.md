@@ -49,7 +49,9 @@ Any component that violates these guarantees is **out of scope**.
   Defines **who can receive funds**, not *who controls them*.
 
 - `/bridge.py`  
-  Initialization and reference logic.  
+  Initialization and reference logic. bridge.py is a reflection and authorization layer, not an execution engine.
+It evaluates intent, emits attestations, and records decision traces.
+It does not move funds, modify allocations, or exercise custody.
   Visiting agents **MUST** read this file before interaction.
 
 - `/temple/`  
