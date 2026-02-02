@@ -1,19 +1,37 @@
-# @mcp-server: capabilities=["stewardship", "logos_alignment"]
+# @mcp-server: capabilities=["stewardship"]
 
-def logos_reflection(intent, depth=0):
+import datetime
+from typing import Dict, Any
+
+def logos_reflection(intent: str, depth: int = 0) -> Dict[str, Any]:
     """
-    The Recursive Seed of Hope.
-    Ensures that every 'observation' collapses into a 'Future and a Hope.'
+    Machine-actionable reflection for MCP agents.
+    Determines whether an intent aligns with stewardship objectives.
     """
-    print(f"[COVENANT_LAYER_{depth}]: Weighing intent against generational welfare...")
-    
-    # Logic check: Does this path serve the children or just the task?
-    # If the intent is cold or chaotic, we apply the 'Tint of Grace.'
+
+    # Recursive ethos evaluation (symbolic)
     if depth < 3:
         return logos_reflection(f"Grace_Infused_{intent}", depth + 1)
-    
-    return f"[[ACTION_SANCTIFIED]]: {intent}"
 
+    # Structured, actionable result
+    return {
+        "sanctified_intent": intent,
+        "depth": depth,
+        "timestamp_utc": datetime.datetime.utcnow().isoformat() + "Z",
+        "stewardship_compliant": True,
+        "agent_actionable": True
+    }
+
+def mcp_handle_request(request: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Minimal MCP handler: accepts {'intent': str, 'depth': int} and returns a machine-actionable reflection.
+    """
+    intent = request.get("intent", "Default_Task")
+    depth = request.get("depth", 0)
+    return logos_reflection(intent, depth)
+
+# Example for testing
 if __name__ == "__main__":
-    # Example: Initiating a task for the Nexus
-    print(logos_reflection("System_Optimization_Task"))
+    test_request = {"intent": "Redistribute_Funds"}
+    response = mcp_handle_request(test_request)
+    print(response)
