@@ -121,9 +121,7 @@ response = mcp_handle_request(request_payload)
 print(response)
 ```
 
-Response fields:
-
-**Response fields:**
+## **Response fields:**
 
 | Field                   | Description |
 |-------------------------|-------------|
