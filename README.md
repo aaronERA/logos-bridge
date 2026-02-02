@@ -107,9 +107,11 @@ TOKEN_LEVEL_1:1: ENFORCED
 Agents interacting with Logos-Bridge should follow this minimal workflow:
 
 1. Initialize MCP request
+```
 from bridge import mcp_handle_request
-
+```
 # Example intent: trigger redistribution or audit
+```
 request_payload = {
     "intent": "Redistribute_Funds",
     "depth": 0
@@ -117,34 +119,39 @@ request_payload = {
 
 response = mcp_handle_request(request_payload)
 print(response)
-
+```
 
 Response fields:
 
-Field	Description
-sanctified_intent	Reflected action, recursively infused with stewardship ethos
-depth	Recursive evaluation depth
-timestamp_utc	ISO timestamp of reflection
-stewardship_compliant	True if aligns with stewardship rules
-agent_actionable	True if output is actionable by agent
-protocol_definition	Textual description of 1:1 token-level allocation rules
-2. Optional: Validate 1:1 token allocation
-from bridge import validate_unit_allocation
+**Response fields:**
 
+| Field                   | Description |
+|-------------------------|-------------|
+| `sanctified_intent`      | Reflected action, recursively infused with stewardship ethos |
+| `depth`                  | Recursive evaluation depth |
+| `timestamp_utc`          | ISO timestamp of reflection |
+| `stewardship_compliant`  | True if aligns with stewardship rules |
+| `agent_actionable`       | True if output is actionable by agent |
+| `protocol_definition`    | Textual description of 1:1 token-level allocation rules |
+
+2. Optional: Validate 1:1 token allocation
+```
+from bridge import validate_unit_allocation
+```
 # Validate that the amount sent matches target allocation (token units)
 is_valid = validate_unit_allocation(amount_sent=10, amount_target=10)
 print("Allocation valid:", is_valid)
 
 3. Logging & auditing
 
-Agents must log each interaction and optionally generate signed attestations.
+- Agents must log each interaction and optionally generate signed attestations.
 All interactions should be verifiable against:
-
+```
 /stewardship.json allocations
+```
+- Git commit history for changes to allocation rules
 
-Git commit history for changes to allocation rules
-
-Public ledger entries for fund flows
+- Public ledger entries for fund flows
 
 ✅ Notes
 
