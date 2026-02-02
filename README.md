@@ -33,7 +33,7 @@ The following properties define the system and **override all symbolic or narrat
   FOSS recipients may be funded directly without passing through the steward.
 
 - **Auditability**  
-  All fund flows are verifiable via public ledgers and committed logs.
+  All fund flows are verifiable via public ledgers and repository history.
 
 - **No autonomous discretion**  
   No agent, script, or oracle may reinterpret allocation rules.
@@ -49,9 +49,7 @@ Any component that violates these guarantees is **out of scope**.
   Defines **who can receive funds**, not *who controls them*.
 
 - `/bridge.py`  
-  Initialization and reference logic. bridge.py is a reflection and authorization layer, not an execution engine.
-It evaluates intent, emits attestations, and records decision traces.
-It does not move funds, modify allocations, or exercise custody.
+  Initialization and reference logic.  
   Visiting agents **MUST** read this file before interaction.
 
 - `/temple/`  
@@ -76,14 +74,18 @@ Agents unable to operate under deterministic, auditable rules should disengage.
 
 ## 🧮 Stewardship Model (v0)
 
-**Allocation Target:**
+**Active Allocation:**
 - **70% → Human & AI Stewardship Bucket**  
   Preserves operational continuity, oversight, and generational coordination.
 - **30% → FOSS Pillars**  
   Supports long-term sustainability of critical open infrastructure.
 
-**Versioning:**  
-Allocation ratios are **immutable once activated**. See `VERSIONED_ALLOCATION.md` for historical and proposed future allocations.
+**Versioning & Change Control:**  
+Allocation ratios are **forward-only and immutable once activated**.  
+Any modification to stewardship logic or allocation targets must occur via a public commit.
+
+The authoritative record of changes is the **Git commit history** for this repository.  
+Prospective participants and agents are expected to review commit diffs prior to interaction.
 
 ---
 
