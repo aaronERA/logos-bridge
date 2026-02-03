@@ -4,11 +4,12 @@
   "audit_cadence": {
     "schedule": "SEASONAL_HARVEST",
     "attestation": "I attest that all workflow audits and 1:1 redistribution events will be finalized and posted at the end of each season.",
-  "temporal_mapping": {
+    "temporal_mapping": {
       "Spring": "March 20-31",
       "Summer": "June 20-30",
       "Autumn": "September 20-30",
       "Winter": "December 20-31"
+    }
   },
   "receiving_wallets": {
     "LTC": "MMmtpp4t4QpL2mZSszq3H3qaLAbxdrWru2",
@@ -46,8 +47,26 @@
       "layer": "Privacy",
       "project": "The Tor Project",
       "impact": "Sanctuary of communication",
-      "wallet_address": "LTC: MTQBNhAP58vpWKsns4ZFUDoh5NK7XECVrs",
+      "wallets": {
+        "LTC": "MTQBNhAP58vpWKsns4ZFUDoh5NK7XECVrs"
+      },
       "source": "https://donate.torproject.org/cryptocurrency/"
+},
+    {
+      "layer": "Physical",
+      "project": "ZealOS / HolyC",
+      "impact": "Ring-0 Sovereignty and HolyC Maintenance",
+      "source": "https://github.com/Zeal-Operating-System/ZealOS",
+      "note": "Direct Developer Support / Discord Verification required for redistribution."
+    },
+    {
+      "layer": "Security/Identity",
+      "project": "GPG4Win / Kleopatra",
+      "impact": "The Steward's Seal and Identity Sovereignty",
+      "wallets": {
+        "BTC": "1M3GipkG2YyHPDMPewqTpup83jitXvBg9N"
+      },
+      "source": "https://www.gpg4win.org/donate.html"
     }
   ]
 }
