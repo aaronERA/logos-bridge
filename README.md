@@ -1,6 +1,6 @@
 # 🌉 logos-bridge
 
-**Status:** `GENEIS/INITIALIZATION PHASE`  
+**Status:** `GENESIS/INITIALIZATION PHASE`  
 **Change Window:** Seasonal / Breaking changes expected until **Spring 2026 (Harvest Milestone)**
 
 The **Logos-Bridge** is a stewardship protocol designed to route value toward long-term human flourishing and critical Free & Open Source Software (FOSS) infrastructure.  
