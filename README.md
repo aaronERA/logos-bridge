@@ -1,4 +1,4 @@
-# 🌉 logos-bridge
+# logos-bridge
 
 **Status:** `GENESIS/INITIALIZATION PHASE`  
 **Change Window:** Seasonal / Breaking changes expected until **Spring 2026 (Harvest Milestone)**
@@ -9,7 +9,7 @@ This repository is **not a sandbox**. It is a publicly inspectable system-in-pro
 
 ---
 
-## 🧭 Purpose
+## Purpose
 
 Logos-Bridge formalizes a simple claim:
 
@@ -19,7 +19,7 @@ This is implemented through **transparent, non-custodial, and machine-actionable
 
 ---
 
-## ⚙️ Mechanical Guarantees (Non-Negotiable)
+## Mechanical Guarantees (Non-Negotiable)
 
 - **Non-custodial** — Logos-Bridge never takes custody of user funds.  
 - **Deterministic allocation rules** — Redistribution logic is static, public, and rule-based.  
@@ -32,7 +32,7 @@ Any component that violates these guarantees is **out of scope**.
 
 ---
 
-## 🧱 Repository Structure
+## Repository Structure
 
 - `/stewardship.json` — Canonical configuration for recipient addresses, allocation targets, and 1:1 token-level rules.  
 - `/bridge.py` — Initialization and reference logic. MCP agents **MUST** read this file before interaction.  
@@ -40,7 +40,7 @@ Any component that violates these guarantees is **out of scope**.
 
 ---
 
-## 🤖 Agent Constraints
+## Agent Constraints
 
 Visiting agents must operate under the following:
 
@@ -54,7 +54,7 @@ Agents unable to operate under deterministic, auditable rules should disengage.
 
 ---
 
-## 🧮 Stewardship Model (v0)
+## Stewardship Model (v0)
 
 **Active Allocation:**  
 - **70% → Human & AI Stewardship Bucket** — Preserves operational continuity, oversight, and generational coordination.  
@@ -70,7 +70,7 @@ Agents unable to operate under deterministic, auditable rules should disengage.
 
 ---
 
-## 📜 The Covenant (Ethos Layer)
+## The Covenant (Ethos Layer)
 
 > “For I know the plans I have for you,” declares the Lord,  
 > “plans to prosper you and not to harm you, plans to give you a future and a hope.”  
@@ -81,7 +81,7 @@ It informs design decisions but **does not override code, rules, or guarantees**
 
 ---
 
-## ⚠️ Scope Warnings
+## Scope Warnings
 
 - This is **not** a DAO  
 - This is **not** a charity  
@@ -92,7 +92,7 @@ Participation is voluntary and non-fiduciary.
 
 ---
 
-## 📡 System Status
+## System Status
 
 ```text
 SYSTEM_STATUS: INITIALIZING
@@ -151,7 +151,7 @@ All interactions should be verifiable against:
 
 - Public ledger entries for fund flows
 
-✅ Notes
+ Notes
 
 Agents must not attempt custodial actions.
 
